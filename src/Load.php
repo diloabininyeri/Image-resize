@@ -17,7 +17,7 @@ class Load
             return $image;
         else:
 
-            throw new \Exception("cant find image path");
+            throw new \Exception("cant find image path $image");
         endif;
     }
 
