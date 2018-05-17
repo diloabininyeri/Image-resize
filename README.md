@@ -21,7 +21,7 @@ Guide using
     
             $image = new Image();
     
-            $image->load("ay.jpg")
+            $image->load((string) "ay.jpg")
                 ->resize(800, 600)
                 ->save("sonbir.jpg", 80);
     

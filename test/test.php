@@ -13,9 +13,9 @@ class test
 
         $image = new Image();
 
-        $image->load("in.jpg")
-            ->resize(100, 100)
-            ->save("sonbir.jpg", 15);
+        $image->load((string) "ay.jpg")
+            ->resize(800, 600)
+            ->save("sonbir.jpg", 80);
 
 
     }
