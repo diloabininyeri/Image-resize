@@ -1,6 +1,7 @@
 {
     "name": "zeus/image",
     "description": "image resize  and create thumbnail",
+    "keywords": ["image", "resize","gd","library","php","thumbnail"],
     "license": "MIT",
     "authors": [
         {
