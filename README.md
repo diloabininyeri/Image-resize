@@ -1,7 +1,16 @@
 # Image-resize
 
+for install  with composer 
 
+<br>
+
+composer require zeus/image
+
+
+<br>
  use Image\Image;
+ 
+ <br>
 
 
 
