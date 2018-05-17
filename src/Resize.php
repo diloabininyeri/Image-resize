@@ -62,11 +62,11 @@ class Resize
      *
      */
 
-    public function save($savePath)
+    public function save($savePath,$quality)
     {
 
 
-        return $this->resize->save($savePath);
+        return $this->resize->save($savePath,$quality);
 
     }
 }
