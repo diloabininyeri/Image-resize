@@ -7,7 +7,7 @@
 namespace Image\factory;
 
 
-class GifResize
+class GifResize implements ImagesInterfaceResize
 {
 
     private $hedef;

@@ -5,7 +5,8 @@
 
 namespace Image\factory;
 
-class PngResize
+
+class PngResize implements ImagesInterfaceResize
 {
 
     private $hedef;

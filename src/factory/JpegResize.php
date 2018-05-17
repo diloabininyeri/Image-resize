@@ -7,7 +7,7 @@
 
 namespace Image\factory;
 
-class JpegResize
+class JpegResize implements ImagesInterfaceResize
 {
 
     private $hedef;
