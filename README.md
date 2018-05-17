@@ -40,5 +40,6 @@ Guide using
 - load method have one parameter load image load($imagepath)
 - resize method have two parameter   resize($width,$height)
 
-
+**example use on laravel**
+[![](https://image.ibb.co/iFnbdy/Screenshot_from_2018_05_17_14_41_00.png)](https://image.ibb.co/iFnbdy/Screenshot_from_2018_05_17_14_41_00.png)
 
