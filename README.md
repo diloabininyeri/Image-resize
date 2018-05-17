@@ -1,29 +1,44 @@
-# Image-resize
-
-for install  with composer 
-
-<br>
-
-composer require zeus/image
+**php image resize and save library**
 
 
-<br>
- use Image\Image;
- 
- <br>
+    composer require zeus/image
+
+![](https://pilsniak.com/wp-content/uploads/2017/02/logo-composer-transparent.png)
 
 
 
-        $image = new Image();
+Guide using
 
-        $image->load("in.jpg")
-            ->resize(100, 100)
-            ->save("out.jpg", 15);
 
-<br>
+    use Image\Image;
+    
+    
+    class test
+    {
+        public function testResize()
+        {
+    
+    
+            $image = new Image();
+    
+            $image->load("ay.jpg")
+                ->resize(800, 600)
+                ->save("sonbir.jpg", 80);
+    
+    
+        }
+    
+    }
+	
+	
+    
+    
+    (new test())->testResize();
+    
 
-save($output,$quality)
+- save method have two parameter save($outputname,$quality)
+- load method have one parameter load image load($imagepath)
+- resize method have two parameter   resize($width,$height)
 
-load($imagepath)
 
-resize($width,$height)
+
