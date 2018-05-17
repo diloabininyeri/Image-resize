@@ -10,6 +10,14 @@ namespace Image;
 class Load
 {
 
+
+    /**
+     * @param $image
+     * @return mixed
+     * @throws \Exception
+     *
+     *
+     */
     public function loadImage($image)
     {
 

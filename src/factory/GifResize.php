@@ -1,7 +1,5 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: muzlu
  * Date: 17.05.2018
  * Time: 09:33
  */
@@ -10,7 +8,9 @@ namespace Image\factory;
 
 
 class GifResize
-{private $hedef;
+{
+
+    private $hedef;
 
 
     /**

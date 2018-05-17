@@ -57,7 +57,7 @@ class Image
 
     /**
      * @param $savePath
-     * @param $quality
+     * @param int $quality
      * @return mixed
      *
      *

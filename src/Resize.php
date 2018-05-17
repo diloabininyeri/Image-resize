@@ -21,6 +21,7 @@ class Resize
      * @param $height
      * @param $mimetype
      * @param $image
+     * @return $this
      *
      */
     public function resize($width, $height, $mimetype, $image)
@@ -56,12 +57,11 @@ class Resize
 
     /**
      * @param $savePath
+     * @param $quality
      * @return mixed
      *
      *
-     *
      */
-
     public function save($savePath,$quality)
     {
 

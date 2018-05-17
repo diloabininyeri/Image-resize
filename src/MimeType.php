@@ -10,6 +10,11 @@ namespace Image;
 
 class MimeType
 {
+    /**
+     * @param $image
+     * @return string
+     *
+     */
 
     public function getMimeTypeOfImage($image)
     {

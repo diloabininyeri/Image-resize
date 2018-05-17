@@ -4,6 +4,7 @@
  */
 
 namespace Image\factory;
+
 class PngResize
 {
 
