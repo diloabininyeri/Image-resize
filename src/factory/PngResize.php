@@ -23,7 +23,7 @@ class PngResize implements ImagesInterfaceResize
     public function resize($width, $height, $image)
     {
 
-        header('Content-type: image/png');
+        //header('Content-type: image/png');
         $dosya = $image;
 
         $yukseklik = $height;
