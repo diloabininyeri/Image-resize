@@ -14,8 +14,8 @@ class test
         $image = new Image();
 
         $image->load((string) "ay.jpg")
-            ->resize(800, 600)
-            ->save("sonbir.jpg", 80);
+            ->convertWebp()
+            ->save("sonbir.webp", 80);
 
 
     }
@@ -24,3 +24,5 @@ class test
 
 
 (new test())->testResize();
+
+

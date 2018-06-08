@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * Date: 17.05.2018
  * Time: 09:33
@@ -21,7 +22,7 @@ class GifResize implements ImagesInterfaceResize
      *
      *
      */
-    public function resize($width, $height, $image)
+    public function resize($width, $height, $image):GifResize
     {
 
 

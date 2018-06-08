@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace Image;
 
@@ -15,7 +16,8 @@ class Image
     private $width,
         $height,
         $imagePath,
-        $resize;
+        $resize,
+        $convert;
 
     /**
      * @param $width
@@ -24,7 +26,7 @@ class Image
      *
      *
      */
-    public function resize($width, $height)
+    public function resize($width, $height): self
     {
 
         $this->height = $height;
@@ -47,6 +49,24 @@ class Image
      *
      *
      */
+
+    public function convertWebp()
+    {
+
+
+        $mimetype = new MimeType();
+
+        $fileMimeType = $mimetype->getMimeTypeOfImage($this->imagePath);
+
+
+        $this->convert = new FactoryConvert;
+        $this->convert->factory($fileMimeType, $this->imagePath);
+
+
+        return $this;
+
+    }
+
     public function load($imagePath)
     {
 
@@ -62,10 +82,19 @@ class Image
      *
      *
      */
-    public function save($savePath, $quality=100)
+    public function save($savePath, $quality = 100)
     {
+        if ($this->convert) {
 
-        return $this->resize->save($savePath, $quality);
+
+            return $this->convert->save($savePath);
+
+        } else {
+
+            return $this->resize->save($savePath, $quality);
+
+        }
+
 
     }
 }

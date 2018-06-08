@@ -9,7 +9,9 @@
             "email": "berxudar@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "phpunit/phpunit": "^6.5"
+    },
     "autoload":{
 
 
