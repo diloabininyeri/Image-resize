@@ -22,15 +22,15 @@ class ConvertPngToWebp implements FactoryConvertInterface
     private $content;
 
     /**
-     * @param $file
+     * @param $filename
      * @return $this|mixed
      *
      *
      */
-    public function convert($file)
+    public function convert($filename)
     {
 
-        $file = $file;
+        $file = $filename;
         $image = imagecreatefrompng($file);
         ob_start();
         imagepng($image, NULL, 100);
@@ -45,9 +45,8 @@ class ConvertPngToWebp implements FactoryConvertInterface
 
     /**
      * @param $filename
+     * @param $quality
      * @return bool|mixed
-     *
-     *
      *
      */
     public function save($filename, $quality)

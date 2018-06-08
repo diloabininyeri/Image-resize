@@ -42,14 +42,16 @@ class GifResize implements ImagesInterfaceResize
 
     /**
      * @param $savepath
-     * @param int $quality
+     * @param $quality
+     * @return mixed|void
+     *
      *
      *
      */
     public function save($savepath, $quality)
     {
 
-        imagegif($this->hedef, $savepath, $quality*0.1);
+        imagegif($this->hedef, $savepath);
         imagedestroy($this->hedef);
 
     }

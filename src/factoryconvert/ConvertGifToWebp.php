@@ -22,15 +22,15 @@ class ConvertGifToWebp implements FactoryConvertInterface
     private $content;
 
     /**
-     * @param $file
+     * @param $filename
      * @return mixed|void
      *
      *
      */
-    public function convert($file)
+    public function convert($filename)
     {
 
-        $file=$file;
+        $file=$filename;
         $image=  imagecreatefromgif($file);
         ob_start();
         imagegif($image,NULL,100);
@@ -42,16 +42,17 @@ class ConvertGifToWebp implements FactoryConvertInterface
 
     }
 
+
     /**
-     * @param $newfilename
+     * @param $filename
+     * @param $quality
      * @return bool|mixed
      *
      *
      */
-
     public function  save($filename,$quality)
     {
-        imagewebp($this->content,$filename,$quality);
+        imagewebp($this->content,$filename);
         return imagedestroy($this->content);
 
 

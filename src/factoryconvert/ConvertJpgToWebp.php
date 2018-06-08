@@ -23,15 +23,14 @@ class ConvertJpgToWebp  implements FactoryConvertInterface
     private $content;
 
     /**
-     * @param $file
+     * @param $filename
      * @return $this|mixed
      *
-     *
      */
-    public function convert($file)
+    public function convert($filename)
     {
 
-        $file=$file;
+        $file=$filename;
         $image=  imagecreatefromjpeg($file);
         ob_start();
         imagejpeg($image,NULL,100);
@@ -45,6 +44,7 @@ class ConvertJpgToWebp  implements FactoryConvertInterface
 
     /**
      * @param $filename
+     * @param $quality
      * @return bool|mixed
      *
      *

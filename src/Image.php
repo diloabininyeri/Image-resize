@@ -81,6 +81,7 @@ class Image
      * @return mixed
      *
      *
+     *
      */
     public function save($savePath, $quality = 100)
     {
