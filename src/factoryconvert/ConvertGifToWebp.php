@@ -49,9 +49,9 @@ class ConvertGifToWebp implements FactoryConvertInterface
      *
      */
 
-    public function  save($newfilename)
+    public function  save($filename,$quality)
     {
-        imagewebp($this->content,'dd.webp');
+        imagewebp($this->content,$filename,$quality);
         return imagedestroy($this->content);
 
 

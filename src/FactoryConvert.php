@@ -67,9 +67,11 @@ class FactoryConvert
      *
      */
 
-    public function save($filename)
+    public function save($filename,$quality)
     {
-        return $this->factory->save($filename);
+
+
+        return $this->factory->save($filename,$quality);
 
     }
 }

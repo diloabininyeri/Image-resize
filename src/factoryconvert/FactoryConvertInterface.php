@@ -28,5 +28,5 @@ interface FactoryConvertInterface
      * @return mixed
      *
      */
-    public function save($newfilename);
+    public function save($newfilename, $quality);
 }

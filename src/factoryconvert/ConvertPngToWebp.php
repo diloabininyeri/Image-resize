@@ -50,10 +50,10 @@ class ConvertPngToWebp implements FactoryConvertInterface
      *
      *
      */
-    public function save($filename)
+    public function save($filename, $quality)
     {
 
-        imagewebp($this->content, $filename);
+        imagewebp($this->content, $filename, $quality);
         return imagedestroy($this->content);
     }
 }

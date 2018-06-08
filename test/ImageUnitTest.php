@@ -1,11 +1,11 @@
 <?php
 
-include_once "../vendor/autoload.php";
+
 
 use Image\Image;
 
 
-class test
+class imageUnitTest extends \PHPUnit\Framework\TestCase
 {
     public function testResize()
     {
@@ -18,11 +18,14 @@ class test
             ->save("sonbir.webp", 80);
 
 
+
+
+
     }
 
 }
 
 
-(new test())->testResize();
+
 
 

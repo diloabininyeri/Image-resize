@@ -4,8 +4,11 @@
  * Time: 11:02
  */
 
-include_once "../vendor/autoload.php";
+
 use PHPUnit\Framework\TestCase;
+
+
+
 
 
 class ImageResizeTest extends  TestCase
@@ -16,8 +19,8 @@ class ImageResizeTest extends  TestCase
         $image = new Image();
 
         $image->load((string) "ay.jpg")
-            ->convertWebp()
-            ->save("sonbir.webp");
+            ->resize(200,150)
+            ->save("sonbir.jpg",75);
 
     }
 
