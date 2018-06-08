@@ -7,7 +7,7 @@
 
 use PHPUnit\Framework\TestCase;
 
-
+use Image\Image;
 
 class ImageResizeTest extends  TestCase
 {
@@ -16,12 +16,13 @@ class ImageResizeTest extends  TestCase
 
         $image = new Image();
 
-        $image->load((string) "ay.jpg")
+        $path=(string) __DIR__."/ay.jpg";
+        $image->load($path)
             ->resize(200,150)
-            ->save("sonbir.jpg",75);
+            ->save(getcwd()."/test/sonbir.jpg",75);
 
 
-        $this->assertEquals(4,4);
+        $this->assertFileExists(getcwd()."/test/sonbir.jpg",true);
 
     }
 

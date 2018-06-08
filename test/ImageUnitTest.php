@@ -13,9 +13,13 @@ class imageUnitTest extends \PHPUnit\Framework\TestCase
 
         $image = new Image();
 
-        $image->load((string) "ay.jpg")
+        $path=(string) __DIR__."/ay.jpg";
+
+        $image->load($path)
             ->convertWebp()
-            ->save("sonbir.webp", 80);
+            ->save(getcwd()."/test/sonbir.webp",80);
+
+        $this->assertFileExists(getcwd()."/test/sonbir.webp",true);
 
 
 

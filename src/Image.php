@@ -88,7 +88,7 @@ class Image
         if ($this->convert) {
 
 
-            return $this->convert->save($savePath);
+            return $this->convert->save($savePath,$quality);
 
         } else {
 
