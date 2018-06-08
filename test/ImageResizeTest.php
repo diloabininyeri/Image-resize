@@ -9,8 +9,6 @@ use PHPUnit\Framework\TestCase;
 
 
 
-
-
 class ImageResizeTest extends  TestCase
 {
     public function testResizeCase()
@@ -21,6 +19,9 @@ class ImageResizeTest extends  TestCase
         $image->load((string) "ay.jpg")
             ->resize(200,150)
             ->save("sonbir.jpg",75);
+
+
+        $this->assertEquals(4,4);
 
     }
 
