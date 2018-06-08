@@ -6,13 +6,28 @@
 
 namespace Image\factoryconvert;
 
-
+/**
+ * Class ConvertJpgToWebp
+ * @package Image\factoryconvert
+ *
+ *
+ */
 class ConvertJpgToWebp  implements FactoryConvertInterface
 {
 
-
+    /**
+     * @var
+     *
+     *
+     */
     private $content;
 
+    /**
+     * @param $file
+     * @return $this|mixed
+     *
+     *
+     */
     public function convert($file)
     {
 
@@ -28,6 +43,12 @@ class ConvertJpgToWebp  implements FactoryConvertInterface
         return $this;
     }
 
+    /**
+     * @param $filename
+     * @return bool|mixed
+     *
+     *
+     */
     public function save($filename)
     {
 

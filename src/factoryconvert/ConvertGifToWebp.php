@@ -7,11 +7,26 @@
 namespace Image\factoryconvert;
 
 
+/**
+ * Class ConvertGifToWebp
+ * @package Image\factoryconvert
+ *
+ */
+
 class ConvertGifToWebp implements FactoryConvertInterface
 {
-
+    /**
+     * @var
+     *
+     */
     private $content;
 
+    /**
+     * @param $file
+     * @return mixed|void
+     *
+     *
+     */
     public function convert($file)
     {
 
@@ -27,7 +42,12 @@ class ConvertGifToWebp implements FactoryConvertInterface
 
     }
 
-
+    /**
+     * @param $newfilename
+     * @return bool|mixed
+     *
+     *
+     */
 
     public function  save($newfilename)
     {

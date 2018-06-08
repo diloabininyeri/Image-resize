@@ -12,12 +12,21 @@ use Image\factoryconvert\ConvertPngToWebp;
 class FactoryConvert
 {
 
-
+    /**
+     * @var
+     *
+     */
     private $factory;
 
-    public  function factory($mimetype,$file)
+    /**
+     * @param $mimetype
+     * @param $file
+     * @return $this|mixed
+     *
+     *
+     */
+    public function factory($mimetype, $file)
     {
-
 
         $extension = explode("/", $mimetype)[1];
 
@@ -25,25 +34,21 @@ class FactoryConvert
         if ($extension == "jpg" || $extension == "jpeg") {
 
 
-
-                  $this->factory=new ConvertJpgToWebp();
-                   return  $this->factory->convert($file);
-
-
+            $this->factory = new ConvertJpgToWebp();
+            return $this->factory->convert($file);
 
 
         } else if ($extension == "png" or $extension == "PNG") {
 
 
-            $this->factory=new ConvertPngToWebp();
-           return  $this->factory->convert($file);
-
+            $this->factory = new ConvertPngToWebp();
+            return $this->factory->convert($file);
 
 
         } else {
 
-            $this->factory=new ConvertJpgToWebp();
-            return  $this->factory->convert($file);
+            $this->factory = new ConvertJpgToWebp();
+            return $this->factory->convert($file);
 
 
         }
@@ -52,16 +57,18 @@ class FactoryConvert
         return $this;
 
 
-
-
-
     }
 
 
-    public function  save($filename)
+    /***
+     * @param $filename
+     * @return mixed
+     *
+     *
+     */
+
+    public function save($filename)
     {
-
-
         return $this->factory->save($filename);
 
     }
