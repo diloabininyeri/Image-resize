@@ -9,4 +9,5 @@ php:
   - nightly
 script:
   - composer install
+  - ./vendor/bin/phpunit
   
